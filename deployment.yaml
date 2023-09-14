@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uiproject-deployment
+  labels:
+    app: uiapp
+spec:
+  replicas: 1                             #Number of pods
+  selector:
+    matchLabels:
+      app: uiapp
+  template:
+    metadata:
+      labels:
+        app: uiapp
+    spec:
+      containers:
+      - name: uiapp
+        image: usmanc8/uiproject:v3      #Docker image
+        ports:
+        - containerPort: 80
