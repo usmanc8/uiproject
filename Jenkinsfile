@@ -1,7 +1,7 @@
 pipeline{
 
     agent{
-        label "Windows_Agent"
+        label "master"
     }
     environment{
         APP_NAME = "uiproject"
