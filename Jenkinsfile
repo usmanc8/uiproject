@@ -25,7 +25,7 @@ pipeline{
     stages{
         stage("Cleanup Workspace"){
             steps {
-                echo "Hello world once"
+                CleanWs()
             }
         }
     
